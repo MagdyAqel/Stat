@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>المحلل الإحصائي</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div>
+      <p class="kicker">منصة مساعدة للباحثين وطلبة الدراسات العليا</p>
+      <h1>المحلل الإحصائي</h1>
+      <p class="designer">تصميم الموقع: أ.د. مجدي سعيد عقل</p>
+    </div>
+    <section class="hero-card">
+      <span>اختيار الأسلوب الإحصائي</span>
+      <strong>تحليل آلي منظم</strong>
+      <small>فحص طبيعي، اختيار اختبار، جداول، رسوم، وتفسير تربوي.</small>
+    </section>
+  </header>
+
+  <nav class="nav">
+    <a href="#form">إدخال البيانات</a>
+    <a href="#guide">دليل الاختيار</a>
+    <a href="#resultsArea">النتائج</a>
+    <button id="templateBtn" type="button">تحميل قالب البيانات</button>
+  </nav>
+
+  <main class="shell">
+    <aside class="steps">
+      <div class="step active"><b>1</b><span>التصميم البحثي</span></div>
+      <div class="step"><b>2</b><span>نوع المتغير</span></div>
+      <div class="step"><b>3</b><span>إدخال البيانات</span></div>
+      <div class="step"><b>4</b><span>النتائج والتفسير</span></div>
+    </aside>
+
+    <section class="panel">
+      <form id="form" class="form">
+        <fieldset>
+          <legend>نوع التصميم البحثي</legend>
+          <div class="choices">
+            <label><input type="radio" name="design" value="paired" checked><span>اختبار قبلي/بعدي لمجموعة واحدة</span></label>
+            <label><input type="radio" name="design" value="independent"><span>مجموعتان: تجريبية وضابطة</span></label>
+            <label><input type="radio" name="design" value="anova"><span>أكثر من مجموعة</span></label>
+            <label><input type="radio" name="design" value="repeated"><span>قياسات متكررة</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset id="guide">
+          <legend>معايير اختيار الاختبار</legend>
+          <div class="guide-grid">
+            <label><span>نوع المتغير</span><select id="variableType"><option value="scale">كمي / فئوي متصل</option><option value="ordinal">رتبي</option><option value="nominal">اسمي / تكرارات</option></select><small>يساعد في اختيار الاختبار المعلمي أو غير المعلمي.</small></label>
+            <label><span>الهدف البحثي</span><select id="goal"><option value="compare">مقارنة متوسطات أو رتب</option><option value="relationship">دراسة علاقة بين متغيرين</option><option value="frequencies">تحليل تكرارات وتصنيفات</option></select><small>للعلاقة استخدم عمودين يمثلان المتغيرين.</small></label>
+            <label><span>مستوى الدلالة</span><select id="alpha"><option value="0.05">0.05</option><option value="0.01">0.01</option><option value="0.10">0.10</option></select><small>تقارن قيمة الدلالة بهذا المستوى.</small></label>
+          </div>
+        </fieldset>
+
+        <div class="settings">
+          <label><span>عدد المجموعات أو المجتمعات</span><input id="groupCount" type="number" min="1" max="8" value="2"></label>
+          <label><span>عدد أفراد العينة في كل مجموعة</span><input id="sampleSize" type="number" min="2" max="500" value="10"></label>
+          <button id="buildGroups" type="button" class="secondary">تجهيز خانات البيانات</button>
+        </div>
+
+        <fieldset>
+          <legend>إدخال البيانات</legend>
+          <div class="input-methods">
+            <label><input type="radio" name="inputMethod" value="manual" checked><span>كتابة البيانات مباشرة</span></label>
+            <label><input type="radio" name="inputMethod" value="file"><span>رفع ملف CSV من Excel</span></label>
+          </div>
+          <div id="manualInput" class="data-grid"></div>
+          <div id="fileInput" class="file-box hidden">
+            <input id="dataFile" type="file" accept=".csv,.txt">
+            <p>احفظ ملف Excel بصيغة CSV، بحيث تمثل الأعمدة المجموعات أو المتغيرات والصفوف القيم.</p>
+          </div>
+        </fieldset>
+
+        <div class="actions">
+          <button class="primary" type="submit">تنفيذ التحليل الإحصائي</button>
+          <button class="secondary" type="button" id="exampleBtn">تحميل مثال تجريبي</button>
+          <button class="secondary" type="button" id="clearBtn">مسح البيانات</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <section id="resultsArea" class="results-section">
+    <div class="results-head">
+      <div><h2>نتائج التحليل</h2><p>تظهر الجداول والتفسير بعد تنفيذ التحليل.</p></div>
+      <div class="report-actions">
+        <button id="jsonBtn" disabled>حفظ JSON</button>
+        <button id="csvBtn" disabled>حفظ CSV</button>
+        <button id="printBtn" disabled>طباعة / PDF</button>
+      </div>
+    </div>
+    <div id="results" class="results"><div class="empty"><strong>لم يتم تنفيذ تحليل بعد</strong><span>اختر التصميم وأدخل البيانات ثم اضغط تنفيذ التحليل.</span></div></div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
