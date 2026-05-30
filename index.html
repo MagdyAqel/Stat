@@ -23,6 +23,8 @@
   <nav class="nav">
     <a href="#form">إدخال البيانات</a>
     <a href="#guide">دليل الاختيار</a>
+    <a href="#methodology">المساعد المنهجي</a>
+    <a href="#graduateSupport">دعم الباحث</a>
     <a href="#resultsArea">النتائج</a>
     <button id="templateBtn" type="button">تحميل قالب البيانات</button>
   </nav>
@@ -54,6 +56,15 @@
             <label><span>الهدف البحثي</span><select id="goal"><option value="compare">مقارنة متوسطات أو رتب</option><option value="relationship">دراسة علاقة بين متغيرين</option><option value="frequencies">تحليل تكرارات وتصنيفات</option></select><small>للعلاقة استخدم عمودين يمثلان المتغيرين.</small></label>
             <label><span>مستوى الدلالة</span><select id="alpha"><option value="0.05">0.05</option><option value="0.01">0.01</option><option value="0.10">0.10</option></select><small>تقارن قيمة الدلالة بهذا المستوى.</small></label>
           </div>
+        </fieldset>
+
+        <fieldset id="methodology">
+          <legend>المساعد المنهجي لطلبة الدراسات العليا</legend>
+          <div class="assistant-box">
+            <div><h3>توصية قبل إدخال البيانات</h3><p>اضبط التصميم ونوع المتغير والهدف البحثي، ثم اعرض الاختبار المتوقع وطريقة ترتيب البيانات.</p></div>
+            <button class="secondary" type="button" id="methodologyBtn">اعرض التوصية المنهجية</button>
+          </div>
+          <div id="methodologyOutput" class="methodology-output">اختر الإعدادات أعلاه ثم اعرض التوصية المنهجية.</div>
         </fieldset>
 
         <div class="settings">
@@ -94,6 +105,15 @@
       </div>
     </div>
     <div id="results" class="results"><div class="empty"><strong>لم يتم تنفيذ تحليل بعد</strong><span>اختر التصميم وأدخل البيانات ثم اضغط تنفيذ التحليل.</span></div></div>
+  </section>
+
+  <section id="graduateSupport" class="results-section support-section">
+    <div class="results-head"><div><h2>دعم طالب الدراسات العليا</h2><p>إرشادات مختصرة لكتابة فصل النتائج وترتيب البيانات.</p></div></div>
+    <div class="support-grid">
+      <article class="support-card"><h3>صياغة أكاديمية عامة</h3><p>أظهرت نتائج التحليل الإحصائي باستخدام اختبار (...) أن قيمة الاختبار بلغت (...)، وقيمة الدلالة بلغت (...)، وهي أكبر/أقل من مستوى الدلالة المعتمد (...). وبناءً على ذلك توجد/لا توجد فروق ذات دلالة إحصائية.</p></article>
+      <article class="support-card"><h3>ترتيب البيانات في Excel</h3><p>اجعل كل مجموعة أو قياس في عمود مستقل. في حالة العلاقة بين متغيرين، استخدم عمودين فقط. في حالة التكرارات، اجعل كل صف يمثل فئة أو حالة مقارنة.</p></article>
+      <article class="support-card"><h3>مصطلحات سريعة</h3><dl class="glossary"><dt>الدلالة الإحصائية</dt><dd>احتمال أن تكون النتيجة غير عشوائية وفق مستوى دلالة محدد.</dd><dt>حجم الأثر</dt><dd>مؤشر يساعد في فهم قوة الفرق أو العلاقة.</dd><dt>اختبار معلمي</dt><dd>يناسب البيانات الكمية والتوزيع المقبول.</dd><dt>اختبار غير معلمي</dt><dd>يناسب البيانات الرتبية أو العينات الصغيرة.</dd></dl></article>
+    </div>
   </section>
 
   <script src="app.js"></script>
