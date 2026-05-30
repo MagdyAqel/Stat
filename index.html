@@ -13,105 +13,31 @@
       <h1>المحلل الإحصائي</h1>
       <p class="designer">تصميم الموقع: أ.د. مجدي سعيد عقل</p>
     </div>
-    <section class="hero-card">
-      <span>اختيار الأسلوب الإحصائي</span>
-      <strong>تحليل آلي أو يدوي</strong>
-      <small>فروق، علاقات، تكرارات، انحدار، قدرة تنبؤية، وتفسير تربوي.</small>
-    </section>
+    <section class="hero-card"><span>اختيار الأسلوب الإحصائي</span><strong>تحليل آلي أو يدوي</strong><small>فروق، علاقات، تكرارات، انحدار، قدرة تنبؤية، وتفسير تربوي.</small></section>
   </header>
 
   <nav class="nav">
-    <a href="#form">إدخال البيانات</a>
-    <a href="#guide">دليل الاختيار</a>
-    <a href="#methodPicker">اختيار الأسلوب</a>
-    <a href="#aiAssistant">دعم ChatGPT</a>
-    <a href="#graduateSupport">دعم الباحث</a>
-    <a href="#resultsArea">النتائج</a>
-    <button id="templateBtn" type="button">تحميل قالب البيانات</button>
+    <a href="#form">إدخال البيانات</a><a href="#guide">دليل الاختيار</a><a href="#methodPicker">اختيار الأسلوب</a><a href="#aiAssistant">دعم ChatGPT</a><a href="#graduateSupport">دعم الباحث</a><a href="#resultsArea">النتائج</a><button id="templateBtn" type="button">تحميل قالب البيانات</button>
   </nav>
 
   <main class="shell">
-    <aside class="steps">
-      <div class="step active"><b>1</b><span>التصميم البحثي</span></div>
-      <div class="step"><b>2</b><span>نوع المتغير</span></div>
-      <div class="step"><b>3</b><span>اختيار الأسلوب</span></div>
-      <div class="step"><b>4</b><span>النتائج والتفسير</span></div>
-    </aside>
-
+    <aside class="steps"><div class="step active"><b>1</b><span>التصميم البحثي</span></div><div class="step"><b>2</b><span>نوع المتغير</span></div><div class="step"><b>3</b><span>اختيار الأسلوب</span></div><div class="step"><b>4</b><span>النتائج والتفسير</span></div></aside>
     <section class="panel">
       <form id="form" class="form">
-        <fieldset>
-          <legend>نوع التصميم البحثي</legend>
-          <div class="choices">
-            <label><input type="radio" name="design" value="paired" checked><span>اختبار قبلي/بعدي لمجموعة واحدة</span></label>
-            <label><input type="radio" name="design" value="independent"><span>مجموعتان: تجريبية وضابطة</span></label>
-            <label><input type="radio" name="design" value="anova"><span>أكثر من مجموعة</span></label>
-            <label><input type="radio" name="design" value="repeated"><span>قياسات متكررة</span></label>
-          </div>
-        </fieldset>
-
-        <fieldset id="guide">
-          <legend>معايير اختيار الاختبار</legend>
-          <div class="guide-grid">
-            <label><span>نوع المتغير</span><select id="variableType"><option value="scale">كمي / فئوي متصل</option><option value="ordinal">رتبي</option><option value="nominal">اسمي / تكرارات</option></select><small>يساعد في الاختيار بين الاختبارات المعلمية وغير المعلمية.</small></label>
-            <label><span>الهدف البحثي</span><select id="goal"><option value="compare">مقارنة متوسطات أو رتب</option><option value="relationship">دراسة علاقة بين متغيرين</option><option value="prediction">انحدار وقدرة تنبؤية</option><option value="frequencies">تحليل تكرارات وتصنيفات</option></select><small>للعلاقة والانحدار استخدم عمودين يمثلان المتغيرين.</small></label>
-            <label><span>مستوى الدلالة</span><select id="alpha"><option value="0.05">0.05</option><option value="0.01">0.01</option><option value="0.10">0.10</option></select><small>تقارن قيمة الدلالة بهذا المستوى.</small></label>
-          </div>
-        </fieldset>
-
-        <fieldset id="methodPicker">
-          <legend>اختيار الأسلوب الإحصائي</legend>
-          <div class="guide-grid method-picker">
-            <label><span>طريقة الاختيار</span><select id="analysisMode"><option value="auto">اختيار آلي حسب التصميم والبيانات</option><option value="manual">اختيار يدوي من قائمة الأساليب</option></select><small>الاختيار اليدوي مناسب عند وجود خطة تحليل محددة.</small></label>
-            <label><span>الأسلوب اليدوي</span><select id="manualMethod"><option value="auto">حسب توصية الموقع</option><option value="paired_t">اختبار ت للعينات المرتبطة</option><option value="independent_t">اختبار ت للعينات المستقلة</option><option value="one_way_anova">تحليل التباين الأحادي</option><option value="repeated_anova">تحليل التباين للقياسات المتكررة</option><option value="wilcoxon">اختبار ويلكوكسون</option><option value="mann_whitney">اختبار مان-ويتني</option><option value="kruskal_wallis">اختبار كروسكال-واليس</option><option value="friedman">اختبار فريدمان</option><option value="pearson">معامل ارتباط بيرسون</option><option value="spearman">معامل ارتباط سبيرمان</option><option value="chi_square">اختبار كاي تربيع</option><option value="simple_regression">الانحدار الخطي البسيط والقدرة التنبؤية</option></select><small>يفسر الموقع سبب استخدام الأسلوب المختار.</small></label>
-            <div class="method-note"><strong>أساليب تربوية متاحة</strong><span>اختبارات الفروق، الارتباط، كاي تربيع، الاختبارات اللامعلمية، الانحدار، وحجم الأثر.</span></div>
-          </div>
-        </fieldset>
-
-        <fieldset id="methodology">
-          <legend>المساعد المنهجي لطلبة الدراسات العليا</legend>
-          <div class="assistant-box"><div><h3>توصية قبل إدخال البيانات</h3><p>اضبط التصميم ونوع المتغير والهدف، ثم اعرض الاختبار المتوقع وطريقة ترتيب البيانات.</p></div><button class="secondary" type="button" id="methodologyBtn">اعرض التوصية المنهجية</button></div>
-          <div id="methodologyOutput" class="methodology-output">اختر الإعدادات أعلاه ثم اعرض التوصية المنهجية.</div>
-        </fieldset>
-
-        <fieldset id="aiAssistant">
-          <legend>دعم الذكاء الاصطناعي من ChatGPT</legend>
-          <div class="ai-box"><label><span>سؤال الباحث أو ملاحظة يرغب في تفسيرها</span><textarea id="aiQuestion" placeholder="مثال: كيف أفسر نتيجة الانحدار في فصل النتائج؟"></textarea></label><button class="secondary" type="button" id="aiDraftBtn">إنشاء مسودة سؤال إلى ChatGPT</button></div>
-          <div id="aiOutput" class="ai-output">يعرض الموقع مسودة آمنة يمكن إرسالها إلى ChatGPT. الربط المباشر يحتاج خادمًا وسيطًا يحفظ مفتاح OpenAI خارج المتصفح.</div>
-        </fieldset>
-
-        <div class="settings">
-          <label><span>عدد المجموعات أو المجتمعات</span><input id="groupCount" type="number" min="1" max="8" value="2"></label>
-          <label><span>عدد أفراد العينة في كل مجموعة</span><input id="sampleSize" type="number" min="2" max="500" value="10"></label>
-          <button id="buildGroups" type="button" class="secondary">تجهيز خانات البيانات</button>
-        </div>
-
-        <fieldset>
-          <legend>إدخال البيانات</legend>
-          <div class="input-methods"><label><input type="radio" name="inputMethod" value="manual" checked><span>كتابة البيانات مباشرة</span></label><label><input type="radio" name="inputMethod" value="file"><span>رفع ملف CSV من Excel</span></label></div>
-          <div id="manualInput" class="data-grid"></div>
-          <div id="fileInput" class="file-box hidden"><input id="dataFile" type="file" accept=".csv,.txt"><p>اجعل كل عمود يمثل مجموعة أو متغيرًا، وكل صف يمثل مفحوصًا.</p></div>
-        </fieldset>
-
+        <fieldset><legend>نوع التصميم البحثي</legend><div class="choices"><label><input type="radio" name="design" value="paired" checked><span>اختبار قبلي/بعدي لمجموعة واحدة</span></label><label><input type="radio" name="design" value="independent"><span>مجموعتان: تجريبية وضابطة</span></label><label><input type="radio" name="design" value="anova"><span>أكثر من مجموعة</span></label><label><input type="radio" name="design" value="repeated"><span>قياسات متكررة</span></label></div></fieldset>
+        <fieldset id="guide"><legend>معايير اختيار الاختبار</legend><div class="guide-grid"><label><span>نوع المتغير</span><select id="variableType"><option value="scale">كمي / فئوي متصل</option><option value="ordinal">رتبي</option><option value="nominal">اسمي / تكرارات</option></select><small>يساعد في الاختيار بين الاختبارات المعلمية وغير المعلمية.</small></label><label><span>الهدف البحثي</span><select id="goal"><option value="compare">مقارنة متوسطات أو رتب</option><option value="relationship">دراسة علاقة بين متغيرين</option><option value="prediction">انحدار وقدرة تنبؤية</option><option value="frequencies">تحليل تكرارات وتصنيفات</option></select><small>للعلاقة والانحدار استخدم عمودين يمثلان المتغيرين.</small></label><label><span>مستوى الدلالة</span><select id="alpha"><option value="0.05">0.05</option><option value="0.01">0.01</option><option value="0.10">0.10</option></select><small>تقارن قيمة الدلالة بهذا المستوى.</small></label></div></fieldset>
+        <fieldset id="methodPicker"><legend>اختيار الأسلوب الإحصائي</legend><div class="guide-grid method-picker"><label><span>طريقة الاختيار</span><select id="analysisMode"><option value="auto">اختيار آلي حسب التصميم والبيانات</option><option value="manual">اختيار يدوي من قائمة الأساليب</option></select><small>الاختيار اليدوي مناسب عند وجود خطة تحليل محددة.</small></label><label><span>الأسلوب اليدوي</span><select id="manualMethod"><option value="auto">حسب توصية الموقع</option><option value="paired_t">اختبار ت للعينات المرتبطة</option><option value="independent_t">اختبار ت للعينات المستقلة</option><option value="one_way_anova">تحليل التباين الأحادي</option><option value="repeated_anova">تحليل التباين للقياسات المتكررة</option><option value="wilcoxon">اختبار ويلكوكسون</option><option value="mann_whitney">اختبار مان-ويتني</option><option value="kruskal_wallis">اختبار كروسكال-واليس</option><option value="friedman">اختبار فريدمان</option><option value="pearson">معامل ارتباط بيرسون</option><option value="spearman">معامل ارتباط سبيرمان</option><option value="chi_square">اختبار كاي تربيع</option><option value="simple_regression">الانحدار الخطي البسيط والقدرة التنبؤية</option></select><small>يفسر الموقع سبب استخدام الأسلوب المختار.</small></label><div class="method-note"><strong>أساليب تربوية متاحة</strong><span>اختبارات الفروق، الارتباط، كاي تربيع، الاختبارات اللامعلمية، الانحدار، وحجم الأثر.</span></div></div></fieldset>
+        <fieldset id="methodology"><legend>المساعد المنهجي لطلبة الدراسات العليا</legend><div class="assistant-box"><div><h3>توصية قبل إدخال البيانات</h3><p>اضبط التصميم ونوع المتغير والهدف، ثم اعرض الاختبار المتوقع وطريقة ترتيب البيانات.</p></div><button class="secondary" type="button" id="methodologyBtn">اعرض التوصية المنهجية</button></div><div id="methodologyOutput" class="methodology-output">اختر الإعدادات أعلاه ثم اعرض التوصية المنهجية.</div></fieldset>
+        <fieldset id="aiAssistant"><legend>دعم الذكاء الاصطناعي من ChatGPT</legend><div class="ai-box"><label><span>سؤال الباحث أو ملاحظة يرغب في تفسيرها</span><textarea id="aiQuestion" placeholder="مثال: كيف أفسر نتيجة الانحدار في فصل النتائج؟"></textarea></label><button class="secondary" type="button" id="aiDraftBtn">إظهار إجابة داخل الصفحة</button></div><div id="aiOutput" class="ai-output">اكتب سؤالك ثم اضغط الزر لعرض إجابة إرشادية داخل الصفحة. الربط المباشر مع ChatGPT يحتاج خادمًا وسيطًا يحفظ مفتاح OpenAI خارج المتصفح.</div></fieldset>
+        <div class="settings"><label><span>عدد المجموعات أو المجتمعات</span><input id="groupCount" type="number" min="1" max="8" value="2"></label><label><span>عدد أفراد العينة في كل مجموعة</span><input id="sampleSize" type="number" min="2" max="500" value="10"></label><button id="buildGroups" type="button" class="secondary">تجهيز خانات البيانات</button></div>
+        <fieldset><legend>إدخال البيانات</legend><div class="input-methods"><label><input type="radio" name="inputMethod" value="manual" checked><span>كتابة البيانات مباشرة</span></label><label><input type="radio" name="inputMethod" value="file"><span>رفع ملف CSV من Excel</span></label></div><div id="manualInput" class="data-grid"></div><div id="fileInput" class="file-box hidden"><input id="dataFile" type="file" accept=".csv,.txt"><p>اجعل كل عمود يمثل مجموعة أو متغيرًا، وكل صف يمثل مفحوصًا.</p></div></fieldset>
         <div class="actions"><button class="primary" type="submit">تنفيذ التحليل الإحصائي</button><button class="secondary" type="button" id="exampleBtn">تحميل مثال تجريبي</button><button class="secondary" type="button" id="clearBtn">مسح البيانات</button></div>
       </form>
     </section>
   </main>
 
-  <section id="resultsArea" class="results-section">
-    <div class="results-head"><div><h2>نتائج التحليل</h2><p>تظهر الجداول والتفسير بعد تنفيذ التحليل.</p></div><div class="report-actions"><button id="jsonBtn" disabled>حفظ JSON</button><button id="csvBtn" disabled>حفظ CSV</button><button id="printBtn" disabled>طباعة / PDF</button></div></div>
-    <div id="results" class="results"><div class="empty"><strong>لم يتم تنفيذ تحليل بعد</strong><span>اختر التصميم وأدخل البيانات ثم اضغط تنفيذ التحليل.</span></div></div>
-  </section>
-
-  <section id="graduateSupport" class="results-section support-section">
-    <div class="results-head"><div><h2>دعم طالب الدراسات العليا</h2><p>إرشادات مختصرة لكتابة فصل النتائج وترتيب البيانات.</p></div></div>
-    <div class="support-grid">
-      <article class="support-card"><h3>صياغة أكاديمية عامة</h3><p>أظهرت نتائج التحليل الإحصائي باستخدام اختبار (...) أن قيمة الاختبار بلغت (...)، وقيمة الدلالة بلغت (...)، وهي أكبر/أقل من مستوى الدلالة المعتمد (...).</p></article>
-      <article class="support-card"><h3>ترتيب البيانات في Excel</h3><p>اجعل كل مجموعة أو قياس في عمود مستقل. في حالة العلاقة أو الانحدار، استخدم عمودين فقط: X وY.</p></article>
-      <article class="support-card"><h3>قائمة الأساليب التربوية</h3><p>اختبارات ت، تحليل التباين، ويلكوكسون، مان-ويتني، كروسكال-واليس، فريدمان، بيرسون، سبيرمان، كاي تربيع، والانحدار الخطي البسيط.</p></article>
-    </div>
-  </section>
-
+  <section id="resultsArea" class="results-section"><div class="results-head"><div><h2>نتائج التحليل</h2><p>تظهر الجداول والتفسير بعد تنفيذ التحليل.</p></div><div class="report-actions"><button id="jsonBtn" disabled>حفظ JSON</button><button id="csvBtn" disabled>حفظ CSV</button><button id="printBtn" disabled>طباعة / PDF</button></div></div><div id="results" class="results"><div class="empty"><strong>لم يتم تنفيذ تحليل بعد</strong><span>اختر التصميم وأدخل البيانات ثم اضغط تنفيذ التحليل.</span></div></div></section>
+  <section id="graduateSupport" class="results-section support-section"><div class="results-head"><div><h2>دعم طالب الدراسات العليا</h2><p>إرشادات مختصرة لكتابة فصل النتائج وترتيب البيانات.</p></div></div><div class="support-grid"><article class="support-card"><h3>صياغة أكاديمية عامة</h3><p>أظهرت نتائج التحليل الإحصائي باستخدام اختبار (...) أن قيمة الاختبار بلغت (...)، وقيمة الدلالة بلغت (...).</p></article><article class="support-card"><h3>ترتيب البيانات في Excel</h3><p>اجعل كل مجموعة أو قياس في عمود مستقل. في حالة العلاقة أو الانحدار، استخدم عمودين فقط: X وY.</p></article><article class="support-card"><h3>قائمة الأساليب التربوية</h3><p>اختبارات ت، تحليل التباين، ويلكوكسون، مان-ويتني، كروسكال-واليس، فريدمان، بيرسون، سبيرمان، كاي تربيع، والانحدار الخطي البسيط.</p></article></div></section>
   <script src="app.js"></script>
 </body>
 </html>
